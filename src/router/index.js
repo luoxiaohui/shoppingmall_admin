@@ -48,39 +48,39 @@ export const constantRouterMap = [{
     },
 
     {
-        path: '/example',
+        path: '/commodity',
         component: Layout,
-        redirect: '/example/table',
+        redirect: '/commodity/commoditylist',
         name: 'Example',
         meta: { title: '商品', icon: 'example' },
         children: [{
-                path: 'table',
-                name: 'Table',
+                path: 'commoditylist',
+                name: 'commodityList',
                 component: () =>
-                    import ('@/views/table/index'),
+                    import ('@/views/commodity/commoditylist'),
                 meta: { title: '商品列表', icon: 'table' }
             },
             {
-                path: 'tree',
-                name: 'Tree',
+                path: 'addcommodity',
+                name: 'Addcommodity',
                 component: () =>
-                    import ('@/views/tree/index'),
+                    import ('@/views/commodity/addcommodity'),
                 meta: { title: '添加商品', icon: 'tree' }
             }
         ]
     },
 
-    {
-        path: '/form',
-        component: Layout,
-        children: [{
-            path: 'index',
-            name: 'Form',
-            component: () =>
-                import ('@/views/form/index'),
-            meta: { title: 'Form', icon: 'form' }
-        }]
-    },
+    // {
+    //     path: '/form',
+    //     component: Layout,
+    //     children: [{
+    //         path: 'index',
+    //         name: 'Form',
+    //         component: () =>
+    //             import ('@/views/form/index'),
+    //         meta: { title: 'Form', icon: 'form' }
+    //     }]
+    // },
 
     { path: '*', redirect: '/404', hidden: true }
 ]
